@@ -1,0 +1,72 @@
+:root {
+    --gray_border: hsl(0, 0%, 45.1%);
+    --darker_fields: hsl(240, 5.9%, 90%);
+    --brighter_fields: hsl(0, 0%, 98%);
+    --selected: hsl(212.70000000000005, 26.8%, 83.9%);
+    --relevant: hsl(214.29999999999995, 31.8%, 91.4%);
+    --cell-width: 75px;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3rem;
+    overflow: hidden;
+}
+#container {
+    display: grid;
+    grid-template-columns: repeat(9, 75px);
+    grid-template-rows: repeat(9, 75px);
+}
+
+button  {
+    font-size: 2rem;
+
+}
+
+.buttons {
+    width: calc(9* var(--cell-width));
+    display: flex;
+    justify-content: space-between;
+}
+input {
+    text-align: center;
+    border: 1px solid var(--gray_border);
+    background-color: var(--darker_fields);
+    font-size: 1.5rem;
+    outline:none;
+    cursor: pointer;
+}
+
+input:focus, input.active {
+    outline: none;
+    background-color: var(--selected);
+}
+
+.dark {
+    background-color: var(--darker_fields);
+}
+
+.light {
+    background-color: var(--brighter_fields);
+}
+
+.highlight {
+    background-color: var(--relevant);
+}
+
+.wrong {
+    color: red;
+}
+
+.blocked {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.options {
+    color: orange;
+}
